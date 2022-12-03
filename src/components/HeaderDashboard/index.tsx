@@ -35,6 +35,11 @@ export const HeaderDashboard = () => {
               style={{
                 borderColor: color,
               }}
+              styles={{
+                root: {
+                  backgroundColor: color,
+                },
+              }}
               className={styles.avatarBorder}
               size='md'
               radius='md'
