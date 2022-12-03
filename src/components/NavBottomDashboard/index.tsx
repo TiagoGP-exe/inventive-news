@@ -1,6 +1,12 @@
-import { useMantineColorScheme } from '@mantine/core'
+import { ActionIcon, Button, useMantineColorScheme } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { IconBookmarks, IconHome, IconNotes, IconSearch } from '@tabler/icons'
+import {
+  IconBookmarks,
+  IconHome,
+  IconNotes,
+  IconPlus,
+  IconSearch,
+} from '@tabler/icons'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { verifyUrl } from '../../utils/url'
@@ -42,6 +48,15 @@ export const NavBottomDashboard = () => {
       }}
       className={styles.navBottom}
     >
+      <ActionIcon
+        size='md'
+        color={dark ? 'gray.0' : 'dark'}
+        radius='xl'
+        variant='filled'
+        className={styles.addButton}
+      >
+        <IconPlus />
+      </ActionIcon>
       {allItems.map((item, index) => (
         <motion.div
           key={index}

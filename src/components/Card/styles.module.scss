@@ -13,6 +13,11 @@
 
   @media screen and (max-width: 1024px) {
     height: initial;
+    user-select: none;
+    pointer-events: none;
+    &:hover {
+      transform: none;
+    }
   }
 
   border-bottom-width: 1px;
@@ -34,6 +39,17 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      h3 {
+        font-size: 1.2rem;
+        line-height: 1rem;
+      }
+      p {
+        font-size: 0.6rem;
+        opacity: 0.7;
+      }
+    }
 
     h3 {
       font-size: 1.5rem;
@@ -58,6 +74,17 @@
       display: flex;
       flex-direction: column;
       flex: 1;
+
+      @media screen and (max-width: 768px) {
+        h2 {
+          font-size: 1.3rem;
+          line-height: 1.5rem;
+        }
+        p {
+          font-size: 0.6rem;
+          opacity: 0.7;
+        }
+      }
 
       gap: 1rem;
     }

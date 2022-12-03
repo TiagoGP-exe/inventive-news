@@ -1,5 +1,5 @@
 import { Button, useMantineColorScheme } from '@mantine/core'
-import { useWindowScroll } from '@mantine/hooks'
+import { useMediaQuery, useWindowScroll } from '@mantine/hooks'
 import { ChangeTheme } from '../ChangeTheme'
 import { Logo } from '../Logo'
 import styles from './styles.module.scss'
@@ -12,6 +12,7 @@ export const HeaderHome = () => {
 
   const color = dark ? 'dark' : 'gray.0'
   const backgroundColor = dark ? '#fff' : '#0E0E11'
+  const match = useMediaQuery('(min-width: 480px)')
 
   return (
     <header
@@ -29,15 +30,17 @@ export const HeaderHome = () => {
 
         <div className={styles.ContentAsideHeader}>
           <ChangeTheme isReverse />
-          <Button
-            component={Link}
-            href='/dashboard'
-            variant='outline'
-            size='md'
-            color={color}
-          >
-            GET STARTED
-          </Button>
+          {match && (
+            <Button
+              component={Link}
+              href='/dashboard'
+              variant='outline'
+              size='md'
+              color={color}
+            >
+              GET STARTED
+            </Button>
+          )}
         </div>
       </div>
     </header>

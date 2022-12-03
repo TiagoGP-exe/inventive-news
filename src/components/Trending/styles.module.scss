@@ -4,7 +4,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0 1rem;
-  max-width: 300px;
+  max-width: 260px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   &:hover {
@@ -86,5 +86,6 @@
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    gap: 4rem 1rem;
   }
 }
