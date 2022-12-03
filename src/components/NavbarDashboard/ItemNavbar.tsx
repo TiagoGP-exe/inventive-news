@@ -1,6 +1,7 @@
 import { ActionIcon } from '@mantine/core'
 import { TablerIcon } from '@tabler/icons'
 import { FC } from 'react'
+import { verifyUrl } from '../../utils/url'
 
 export interface ItemNavbarProps {
   size?: number
@@ -19,11 +20,7 @@ export const ItemNavbar: FC<ItemNavbarProps> = ({
   pathname,
   color,
 }) => {
-  const numberOfBar = url.lastIndexOf('/')
-  const urlWithoutBar = url.slice(numberOfBar)
-  const isActive = pathname === urlWithoutBar
-
-  console.log('pathname', pathname)
+  const isActive = verifyUrl(url, pathname ?? '')
 
   return (
     <ActionIcon onClick={onClick} radius='md' size={size + 12}>

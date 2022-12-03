@@ -1,6 +1,9 @@
 import { useMantineColorScheme } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import { IconBookmarks, IconHome, IconNotes, IconSearch } from '@tabler/icons'
+import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
+import { verifyUrl } from '../../utils/url'
 import { ItemNavbar, ItemNavbarProps } from '../NavbarDashboard/ItemNavbar'
 import styles from './styles.module.scss'
 
@@ -29,6 +32,7 @@ export const NavBottomDashboard = () => {
   const { push, pathname } = useRouter()
   const backgroundColor = dark ? '#0E0E11' : '#fff'
   const color = dark ? '#fff' : '#000'
+  const match = useMediaQuery('(min-width: 420px)')
 
   return (
     <nav
@@ -39,14 +43,25 @@ export const NavBottomDashboard = () => {
       className={styles.navBottom}
     >
       {allItems.map((item, index) => (
-        <ItemNavbar
+        <motion.div
           key={index}
-          {...item}
-          pathname={pathname}
-          size={28}
-          color={color}
-          onClick={() => push(item.url)}
-        />
+          initial={{ opacity: 0, y: 20, scale: 0.5 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            delay: verifyUrl(item.url, pathname) ? 0 : 0.3,
+            duration: 0.8,
+            type: 'spring',
+            bounce: 0,
+          }}
+        >
+          <ItemNavbar
+            {...item}
+            pathname={pathname}
+            size={match ? 32 : 24}
+            color={color}
+            onClick={() => push(item.url)}
+          />
+        </motion.div>
       ))}
     </nav>
   )

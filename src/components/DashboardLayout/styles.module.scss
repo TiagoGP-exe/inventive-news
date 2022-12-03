@@ -1,0 +1,35 @@
+.dashboardLayoutContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+
+  @media screen and (max-width: 1440px) {
+    justify-content: flex-end;
+  }
+}
+
+.dashboardLayoutContent {
+  width: 90%;
+}
+
+.dashboardLayout {
+  display: flex;
+  align-items: flex-end;
+  width: calc(100vw - 260px);
+  max-width: 1120px;
+  margin-top: 5rem;
+  word-break: break-all;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0px;
+  }
+}
+.dashboardLayoutChildren {
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+}
+
+.scroll {
+  height: calc(100vh - 7rem);
+}

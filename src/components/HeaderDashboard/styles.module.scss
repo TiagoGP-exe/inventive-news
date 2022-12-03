@@ -4,15 +4,16 @@
   justify-content: center;
   border-bottom: 1px;
   border-bottom-style: solid;
-  width: 90%;
+  width: calc(100vw - 260px);
   max-width: 1120px;
+  position: fixed;
+  padding: 0 1.5rem;
+  top: 0;
+  z-index: 1;
+
   @media screen and (max-width: 768px) {
     width: 100%;
   }
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  margin-bottom: 1.2rem;
 }
 
 .contentHeaderHome {
@@ -64,14 +65,28 @@
   height: 20px;
 
   h3 {
+    transform: font-size 0.3s ease-in-out;
     text-transform: uppercase;
     font-size: 1.3rem;
     margin-top: -0.4rem;
   }
 
   p {
+    transform: font-size 0.3s ease-in-out;
     font-weight: 600;
     font-size: 0.8rem;
     opacity: 0.6;
+  }
+
+  @media screen and (max-width: 420px) {
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 0.6rem;
+      opacity: 0.6;
+    }
   }
 }

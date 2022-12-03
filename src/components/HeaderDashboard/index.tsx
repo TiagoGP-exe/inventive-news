@@ -5,11 +5,9 @@ import { ChangeTheme } from '../ChangeTheme'
 import styles from './styles.module.scss'
 
 export const HeaderDashboard = () => {
-  const [scroll, scrollTo] = useWindowScroll()
   const { colorScheme } = useMantineColorScheme()
   const matches = useMediaQuery('(min-width: 768px)')
   const dark = colorScheme === 'dark'
-
   const color = dark ? '#fff' : '#000'
   const backgroundColor = dark ? '#0E0E11' : '#fff'
 
@@ -23,11 +21,7 @@ export const HeaderDashboard = () => {
       }}
       className={styles.headerHome}
     >
-      <div
-        className={`${styles.contentHeaderHome} ${
-          scroll.y > 0 && styles.isActived
-        }`}
-      >
+      <div className={`${styles.contentHeaderHome} `}>
         {matches && (
           <ActionIcon>
             <IconPlus />

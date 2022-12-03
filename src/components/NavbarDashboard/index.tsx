@@ -6,8 +6,10 @@ import {
   IconNotes,
   IconSearch,
 } from '@tabler/icons'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { verifyUrl } from '../../utils/url'
 import { Logo } from '../Logo'
 import { ItemNavbar, ItemNavbarProps } from './ItemNavbar'
 import styles from './styles.module.scss'
@@ -42,7 +44,6 @@ export const NavDashboard = () => {
   return (
     <nav
       style={{
-        backgroundColor: backgroundColor,
         borderRightColor: dark ? '#2E2D2D' : '#E6E6E6',
       }}
       className={styles.navHome}
@@ -50,14 +51,25 @@ export const NavDashboard = () => {
       <Logo />
       <div className={styles.listOfItems}>
         {allItems.map((item, index) => (
-          <ItemNavbar
+          <motion.div
             key={index}
-            {...item}
-            pathname={pathname}
-            size={32}
-            color={color}
-            onClick={() => push(item.url)}
-          />
+            initial={{ opacity: 0, y: 20, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              delay: verifyUrl(item.url, pathname) ? 0 : 0.3,
+              duration: 0.8,
+              type: 'spring',
+              bounce: 0,
+            }}
+          >
+            <ItemNavbar
+              {...item}
+              pathname={pathname}
+              size={32}
+              color={color}
+              onClick={() => push(item.url)}
+            />
+          </motion.div>
         ))}
       </div>
       <ActionIcon size={44} radius='md' component={Link} href='/'>
