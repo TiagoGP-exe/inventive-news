@@ -64,7 +64,7 @@ export const Card = () => {
 
           <div className={styles.bottomCardContent}>
             <div className={styles.HStack}>
-              <Chip color='blue' variant='filled' size='md' radius='md'>
+              <Chip color='blue' variant='filled' size='sm' radius='sm'>
                 tags
               </Chip>
 

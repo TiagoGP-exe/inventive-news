@@ -55,7 +55,7 @@ export const NavBottomDashboard = () => {
         variant='filled'
         className={styles.addButton}
       >
-        <IconPlus />
+        <IconPlus color={backgroundColor} stroke={2.5} />
       </ActionIcon>
       {allItems.map((item, index) => (
         <motion.div
