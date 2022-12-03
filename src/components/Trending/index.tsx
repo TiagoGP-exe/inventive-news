@@ -36,7 +36,7 @@ export const Trending = () => {
         </header>
 
         <div className={styles.listTrending}>
-          {fakeData.map((item, index) => (
+          {fakeData.map(item => (
             <ItemTrending key={item.position} {...item} />
           ))}
         </div>

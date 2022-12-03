@@ -3,6 +3,7 @@ import { useWindowScroll } from '@mantine/hooks'
 import { ChangeTheme } from '../ChangeTheme'
 import { Logo } from '../Logo'
 import styles from './styles.module.scss'
+import Link from 'next/link'
 
 export const HeaderHome = () => {
   const [scroll, scrollTo] = useWindowScroll()
@@ -28,7 +29,13 @@ export const HeaderHome = () => {
 
         <div className={styles.ContentAsideHeader}>
           <ChangeTheme isReverse />
-          <Button variant='outline' size='md' color={color}>
+          <Button
+            component={Link}
+            href='/dashboard'
+            variant='outline'
+            size='md'
+            color={color}
+          >
             GET STARTED
           </Button>
         </div>

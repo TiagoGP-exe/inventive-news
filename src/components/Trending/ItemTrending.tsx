@@ -36,7 +36,7 @@ export const ItemTrending: FC<ItemTrendingProps> = ({
           radius='md'
           src={avatar}
         >
-          name
+          {name}
         </Avatar>
         <h3>{name}</h3>
       </header>

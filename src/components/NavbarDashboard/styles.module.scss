@@ -1,0 +1,28 @@
+.navHome {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: width 0.4s ease-in-out, padding 0.5s ease-in-out;
+
+  min-height: 100vh;
+
+  border-right-width: 1px;
+  border-right-style: solid;
+  padding: 2.5rem 1.5rem;
+  width: 260px;
+  margin-right: 2rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 0px;
+    width: 0px;
+    margin-right: 0rem;
+  }
+}
+
+.listOfItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}

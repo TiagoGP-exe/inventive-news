@@ -9,8 +9,8 @@ import { useLocalStorage, useHotkeys } from '@mantine/hooks'
 import { QueryClient } from 'react-query'
 import { QueryClientProvider } from 'react-query'
 import { AppProps } from 'next/app'
-import {} from '@mantine/core'
 import { Container } from '../components/Container'
+import '../styles/globals.scss'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const {
@@ -51,8 +51,8 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         toggleColorScheme={toggleColorScheme}
       >
         <MantineProvider
-          withGlobalStyles
           withNormalizeCSS
+          withGlobalStyles
           theme={{
             colorScheme,
             fontFamily: 'Outfit, sans-serif',

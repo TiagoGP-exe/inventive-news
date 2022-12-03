@@ -52,7 +52,6 @@
   align-items: center;
   justify-content: center;
   padding-top: 2rem;
-  min-height: 30vh;
 }
 
 .contentTreding {
@@ -81,6 +80,8 @@
   gap: 1rem;
   width: 100%;
   max-width: 1120px;
+  margin-top: 1.8rem;
+  min-height: 20.2svh;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;

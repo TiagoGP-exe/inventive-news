@@ -1,6 +1,7 @@
 import { Button, useMantineColorScheme } from '@mantine/core'
 import Image from 'next/image'
 import styles from './styles.module.scss'
+import Link from 'next/link'
 
 export const Banner = () => {
   const { colorScheme } = useMantineColorScheme()
@@ -34,6 +35,8 @@ export const Banner = () => {
             }}
             color={color}
             size='md'
+            component={Link}
+            href='/dashboard'
           >
             START READING
           </Button>

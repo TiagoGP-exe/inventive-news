@@ -40,6 +40,20 @@ body {
   min-width: 280px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
 @media screen and (max-width: 1080px) {
   html {
     font-size: 93.75%; //
