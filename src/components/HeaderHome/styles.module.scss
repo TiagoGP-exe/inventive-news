@@ -1,0 +1,44 @@
+.headerHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.contentHeaderHome {
+  width: 90%;
+  max-width: 1120px;
+  display: flex;
+  height: 8rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+
+  &.isActived {
+    height: 6rem;
+  }
+  @media screen and (max-width: 768px) {
+    height: 6rem;
+    &.isActived {
+      height: 4.5rem;
+    }
+  }
+}
+
+.ContentAsideHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  @media screen and (max-width: 480px) {
+    gap: 0.5rem;
+
+    button {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

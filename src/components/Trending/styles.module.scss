@@ -1,0 +1,89 @@
+.ItemTrendingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 1rem;
+  max-width: 300px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  span {
+    margin-top: 0.5rem;
+    opacity: 0.7;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .ItemTrendingHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      line-height: 1rem;
+    }
+  }
+}
+
+.avatarBorder {
+  border: 2px solid #000000;
+}
+
+.containerTreding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  min-height: 30vh;
+}
+
+.contentTreding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+  max-width: 1120px;
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  }
+}
+
+.TredingHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.listTrending {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1120px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
