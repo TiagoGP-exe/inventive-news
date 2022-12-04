@@ -46,7 +46,7 @@ export const NavBottomDashboard = () => {
         backgroundColor: backgroundColor,
         borderTopColor: dark ? '#2E2D2D' : '#E6E6E6',
       }}
-      className={styles.navBottom}
+      className={`${styles.navBottom} ${dark ? styles.dark : styles.light}`}
     >
       <ActionIcon
         size='md'

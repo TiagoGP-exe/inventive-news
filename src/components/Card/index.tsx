@@ -7,12 +7,15 @@ import {
 } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { IconBookmark } from '@tabler/icons'
-import { useInView } from 'framer-motion'
 import Image from 'next/image'
-import { useRef, useState } from 'react'
+import { FC, useState } from 'react'
 import styles from './styles.module.scss'
 
-export const Card = () => {
+interface CardProps {
+  index: number
+}
+
+export const Card: FC<CardProps> = ({ index }) => {
   const { colorScheme } = useMantineColorScheme()
   const dark = colorScheme === 'dark'
   const color = dark ? '#fff' : '#000'
@@ -89,7 +92,7 @@ export const Card = () => {
               borderColor: color,
             }}
             className={`${styles.avatarBorder} ${styles.imageCard}`}
-            src='https://placeimg.com/640/480/any'
+            src={`https://source.unsplash.com/random/640x${index + 480}`}
             alt='Picture of the author'
             width={230}
             height={230}
