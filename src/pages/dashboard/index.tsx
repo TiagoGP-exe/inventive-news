@@ -4,6 +4,8 @@ import { Card } from '../../components/Card'
 import { DashboardLayout } from '../../components/DashboardLayout'
 const array = Array.from({ length: 100 }, (_, i) => i + 1)
 
+const ifEqualZero = (num: number) => (num === 0 ? 10 : num)
+
 const Dashboard: FC = () => {
   const [arrayTotal, setArrayTotal] = useState(array.slice(0, 10))
 
@@ -24,7 +26,10 @@ const Dashboard: FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 1,
-            delay: item * 0.05,
+            delay:
+              item > 10
+                ? ifEqualZero(Number(String(item)[1])) * 0.2
+                : item * 0.2,
             type: 'spring',
             bounce: 0,
           }}
