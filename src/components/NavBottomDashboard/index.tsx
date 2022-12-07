@@ -36,7 +36,7 @@ export const NavBottomDashboard = () => {
   const { colorScheme } = useMantineColorScheme()
   const dark = colorScheme === 'dark'
   const { push, pathname } = useRouter()
-  const backgroundColor = dark ? '#0E0E11' : '#fff'
+  const backgroundColor = dark ? '#131415' : '#fff'
   const color = dark ? '#fff' : '#000'
   const match = useMediaQuery('(min-width: 420px)')
 

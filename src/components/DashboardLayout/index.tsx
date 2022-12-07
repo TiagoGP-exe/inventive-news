@@ -16,7 +16,7 @@ export const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => {
   const dark = colorScheme === 'dark'
 
   const color = dark ? '#fff' : '#000'
-  const backgroundColor = dark ? '#0E0E11' : '#fff'
+  const backgroundColor = dark ? '#131415' : '#fff'
 
   return (
     <AppShell

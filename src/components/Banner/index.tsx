@@ -7,7 +7,7 @@ export const Banner = () => {
   const { colorScheme } = useMantineColorScheme()
   const dark = colorScheme === 'dark'
   const color = dark ? 'dark' : 'gray.0'
-  const backgroundColor = dark ? '#fff' : '#0E0E11'
+  const backgroundColor = dark ? '#fff' : '#131415'
 
   return (
     <div
@@ -20,7 +20,7 @@ export const Banner = () => {
         <main
           className={styles.mainContent}
           style={{
-            color: dark ? '#0E0E11' : '#fff',
+            color: dark ? '#131415' : '#fff',
           }}
         >
           <h2>Share your ideas in a simple way</h2>

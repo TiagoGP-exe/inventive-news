@@ -9,7 +9,7 @@ export const HeaderDashboard = () => {
   const matches = useMediaQuery('(min-width: 768px)')
   const dark = colorScheme === 'dark'
   const color = dark ? '#fff' : '#000'
-  const backgroundColor = dark ? '#0E0E11' : '#fff'
+  const backgroundColor = dark ? '#131415' : '#fff'
 
   const avatar = 'assets/photo-1.png'
 

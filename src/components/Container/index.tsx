@@ -14,8 +14,8 @@ export const Container: FC<ContainerThemeProps> = ({ children, className }) => {
   return (
     <div
       style={{
-        backgroundColor: dark ? '#0E0E11' : '#fff',
-        color: dark ? '#fff' : '#0E0E11',
+        backgroundColor: dark ? '#131415' : '#fff',
+        color: dark ? '#fff' : '#131415',
       }}
       className={`${styles.Container} ${className}`}
     >

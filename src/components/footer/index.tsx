@@ -7,7 +7,7 @@ export const Footer = () => {
   const { colorScheme } = useMantineColorScheme()
   const dark = colorScheme === 'dark'
 
-  const backgroundColor = dark ? '#FFFFFF4D' : '#0e0e1133'
+  const backgroundColor = dark ? '#FFFFFF4D' : '#13141533'
 
   return (
     <footer

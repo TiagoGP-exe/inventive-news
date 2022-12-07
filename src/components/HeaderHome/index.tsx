@@ -11,7 +11,7 @@ export const HeaderHome = () => {
   const dark = colorScheme === 'dark'
 
   const color = dark ? 'dark' : 'gray.0'
-  const backgroundColor = dark ? '#fff' : '#0E0E11'
+  const backgroundColor = dark ? '#fff' : '#131415'
   const match = useMediaQuery('(min-width: 480px)')
 
   return (
