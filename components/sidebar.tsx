@@ -141,7 +141,7 @@ export const Sidebar = () => {
 
 
       </nav>
-      <div className="bg-gradient-to-t via-background/70 from-background h-24 w-full sticky bottom-12"></div>
+      <div className="bg-gradient-to-t via-background/70 from-background h-24 w-full sticky bottom-12 md:hidden"></div>
     </>
   )
 }
