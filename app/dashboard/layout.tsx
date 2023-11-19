@@ -19,7 +19,9 @@ export default function Dashboard({ children }: DashboardLayoutProps) {
 
       <div className="flex min-h-screen w-full max-w-screen-md flex-col">
         <HeaderDashboard />
-        {children}
+        <div className="flexw-full max-w-screen-md flex-col px-4">
+          {children}
+        </div>
       </div>
     </div>
   )

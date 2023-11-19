@@ -87,8 +87,8 @@ export const Sidebar = () => {
           size={28}
         />
       </aside>
-      <nav className='bg-background/90 xs:px-8 sticky -bottom-3 z-10 mt-4 flex w-full items-center  justify-center border-t py-4 pb-8 backdrop-blur-md md:hidden' >
-        <div className='flex w-full items-center justify-around'>
+      <nav className='bg-background/90 xs:px-8 sticky bottom-0 z-10 flex w-full items-center  justify-center border-t py-4 pb-4 backdrop-blur-md md:hidden' >
+        <div className='flex w-full items-center justify-around relative'>
           <ButtonIcon
             href={routers.home}
             name='home'
@@ -126,17 +126,22 @@ export const Sidebar = () => {
               active={changeLocation === routers.sketch}
             />
           }
+
+          <div className='absolute w-full -top-10 left-0 flex items-center justify-center'>
+            <ButtonIcon
+              href="/"
+              active
+              name='add'
+              size={28}
+              onClick={() => push("/editor/new")}
+              className='bg-foreground text-background hover:bg-foreground/90 hover:text-background/90 rounded-full'
+            />
+          </div>
         </div>
 
-        <ButtonIcon
-          href="/"
-          active
-          name='add'
-          size={28}
-          onClick={() => push("/editor/new")}
-          className='bg-foreground text-background hover:bg-foreground/90 hover:text-background/90 absolute -top-5 mx-auto rounded-full'
-        />
+
       </nav>
+      <div className="bg-gradient-to-t via-background/70 from-background h-24 w-full sticky bottom-12"></div>
     </>
   )
 }
