@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center ">
       <HeaderLayout />
-      <main className='flex flex-col max-w-screen-lg w-full px-4 '>
+      <main className='flex flex-col max-w-screen-lg w-full px-4  '>
         <section className='flex flex-col sm:flex-row items-center sm:items-start justify-between mt-0 sm:mt-4 gap-10 pt-10'>
           <div className='flex flex-col sm:max-w-md items-start gap-2'>
             <h1 className='text-4xl sm:text-5xl font-bold'>Share your ideas
@@ -71,10 +71,11 @@ export default function Home() {
 
 
           <Image
+            unoptimized
             src="/assets/illustration.svg"
             alt="Next.js Logo"
-            width={400}
-            height={400}
+            width={500}
+            height={500}
             className='w-full sm:w-1/2'
           />
         </section>

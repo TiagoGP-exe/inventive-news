@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import { ButtonIcon } from './button-icon'
 import { ModeToggle } from './mode-toggle'
@@ -22,7 +24,7 @@ export const HeaderDashboard = () => {
   }
 
   return (
-    <header className='bg-background/90 xs:px-8 sticky -top-2 z-10 mb-8 flex items-center justify-between border-b px-4 py-5 backdrop-blur-md'>
+    <header className='bg-background xs:px-8 sticky -top-2 z-10 mb-8 flex items-center justify-between border-b px-4 py-5 backdrop-blur-md'>
       <ButtonIcon
         href="/editor/new"
         className='hidden md:block'
